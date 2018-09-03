@@ -5,16 +5,16 @@
             <div class="btn-group mr-2">
                  
                  
-                 <a class="btn btn-sm btn-outline-secondary" href="/admin/projects/create">
+                 <a class="btn btn-sm btn-outline-secondary" href="/admin/create">
                     <span data-feather="plus-square"></span>
                     Create New
                 </a>
+{{!-- <a class="btn btn-sm btn-outline-secondary" href="/admin/projects/:projectAlias/uploaddemo">
+                    <span data-feather="plus-square"></span>
+                    Upload Demo
+                </a> --}}
 
-
-                <a class="btn btn-sm btn-outline-secondary" href="/admin/projects/upload">
-                    <span data-feather="upload"></span>
-                    Upload
-                </a>
+               
 
             </div>
         </div>
@@ -28,7 +28,7 @@
                     <th>Name</th>
                     <th>Alias</th>
                     <th>Github</th>
-                    <th>Actions</th>
+                   
                 </tr>
             </thead>
             <tbody>
@@ -38,7 +38,7 @@
                     <td><a href="/admin/projects/{{alias}}">{{name}}</a></td>
                     <td><a href="/admin/projects/{{alias}}">{{alias}}</a></td>
                     <td><a href="{{githubUrl}}">Repo</a></td>
-                    <td>
+                    {{!-- <td>
                         <a class="" href="#">
                             <span data-feather="alert-circle"></span>
                         </a>
@@ -48,7 +48,7 @@
                         <a class="" href="#">
                             <span data-feather="copy"></span>
                         </a>
-                    </td>
+                    </td> --}}
                 </tr>
                 {{/each}}
             </tbody>

@@ -3,17 +3,10 @@
         <h1 class="h2">{{project.name}}</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
-                <a href="/admin/projects/create" class="btn btn-sm btn-outline-secondary">
-                    <span data-feather="plus-square"></span>
-                    Create New
-                </a>
+                
                 <a href="/admin/projects/{{project.alias}}/delete" class="btn btn-sm btn-outline-secondary">
                     <span data-feather="delete"></span>
                     Delete
-                </a>
-                <a href="/admin/projects/{{project.alias}}/uploaddemo" class="btn btn-sm btn-outline-secondary">
-                    <span data-feather="upload"></span>
-                    Upload Demo
                 </a>
             </div>
         </div>
@@ -51,17 +44,19 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea class="form-control" name="description" id="description" rows="11" value="{{project.description}}">{{project.description}}</textarea>
+                    <textarea class="form-control" name="description" id="description" rows="10" value="{{project.description}}">{{project.description}}</textarea>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group">
+                <div style="text-align:center" class="form-group">
                     <label for="description">Cover Image</label>
+                    <div style="text-align:center">
                     {{#if project.image }}
-                        <img src={{project.image}} width="100%">
-                        <a href="/admin/projects/{{project.alias}}/upload">
+                        <img src={{project.image}} width="77%">
+                        </div>
+                        <div style="text-align:center"><a  href="/admin/projects/{{project.alias}}/upload">
                             Change Cover Photo
-                        </a>
+                        </a></div>
                     {{else}}
                         <a href="/admin/projects/{{project.alias}}/upload" class="btn btn-sm btn-outline-secondary">
                             <span data-feather="upload"></span>

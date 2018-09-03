@@ -3,14 +3,11 @@
         <h1 class="h2">Blog</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">
+                <a class="btn btn-sm btn-outline-secondary" href="/admin/createBlog">
                     <span data-feather="plus-square"></span>
                     Create New
-                </button>
-                <button class="btn btn-sm btn-outline-secondary">
-                    <span data-feather="upload"></span>
-                    Upload
-                </button>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -23,27 +20,17 @@
                     <th>Title</th>
                     <th>Alias</th>
                     <th>Tags</th>
-                    <th>Actions</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 {{#each blogs}}
                 <tr>
-                    <td><a href="#"><img width="100" src="{{image}}"></a></td>
-                    <td><a href="#">{{name}}</a></td>
+                    <td><a href="/admin/blogs/{{alias}}"><img width="100" src="{{image}}"></a></td>
+                    <td><a href="/admin/blogs/{{alias}}">{{name}}</a></td>
                     <td><a href="#">{{alias}}</a></td>
                     <td><a href="">{{tag.name}}</a></td>
-                    <td>
-                        <a class="" href="#">
-                            <span data-feather="alert-circle"></span>
-                        </a>
-                        <a class="" href="#">
-                            <span data-feather="x-circle"></span>
-                        </a>
-                        <a class="" href="#">
-                            <span data-feather="copy"></span>
-                        </a>
-                    </td>
+                   
                 </tr>
                 {{/each}}
             </tbody>

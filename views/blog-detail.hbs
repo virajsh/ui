@@ -1,4 +1,4 @@
-<main role="main">
+<div ><main role="main">
     <div class="album py-3"  >
         <div class="container"> 
             <div class="row">
@@ -49,15 +49,16 @@
                             <li class="breadcrumb-item" aria-current="page">{{ blog.name }}</li>
                         </ol>
                     </nav>
-                    <h1 class="display-3">{{ blog.name }} </h1>
                     <br>
-                    <p class="lead">{{ blog.description }}</p>
+                    <h2 class="display-3">{{ blog.name }} </h2>
                     <br>
-                    <div id="projectSlider" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            {{#each blog.imageSliders}}
+                    <p  class="lead">{{ blog.description }}</p>
+                    <br>
+                    {{!-- <div id="blogSlider" class="carousel slide" data-ride="carousel">
+                        <div   class="carousel-inner">
+                            {{#each blog.image}}
                                 <div class="carousel-item {{#if @first}}active{{/if}}">
-                                    <img class="d-block w-100" src="/images/blog/{{this}}" alt="Slide {{@index}}">
+                                    <img class="d-block w-90" src="/images/blog/{{this}}" alt="Slide {{@index}}">
                                 </div>
                             {{/each}}
                         </div>
@@ -69,11 +70,13 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
+                    </div> --}}
                     <br>
+                    <img src="{{blog.image}}" alt="image" width="77%">
                     
                 </div>
             </div>
         </div>
     </div>
 </main>
+</div>

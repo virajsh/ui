@@ -31,10 +31,10 @@ router.get('/', function (req, res, next) {
 });
   
 router.get('/:blogAlias', function (req, res, next) {
-    
+    console.log("/////////////////////////////////////////////////////")
     client.get("http://localhost:3030/blogs/"+ req.params.blogAlias,
     function (jsonData, response) {
-    
+    console.log(JSON.stringify(jsonData.data));
     res.render('blog-detail', { 
       title: jsonData.data.name ,
       navBlog: true, 
